@@ -1,0 +1,8 @@
+{
+  "mattermost_url": "http://localhost:8065",
+  "bot_token": "your-mattermost-bot-token",
+  "team_id": "your-team-id",
+  "workspace_path": "/path/to/your/workspace",
+  "allowed_channels": [],
+  "claude_model": "claude-opus-4-6"
+}

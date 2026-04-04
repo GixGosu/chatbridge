@@ -1,0 +1,13 @@
+# Install only what you need:
+#   pip install -r requirements-mattermost.txt
+#   pip install -r requirements-discord.txt
+#   pip install -r requirements-slack.txt
+#   pip install -r requirements-telegram.txt
+#
+# Or install everything:
+#   pip install -r requirements.txt
+
+-r requirements-mattermost.txt
+-r requirements-discord.txt
+-r requirements-slack.txt
+-r requirements-telegram.txt

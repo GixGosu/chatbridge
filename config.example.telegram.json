@@ -1,0 +1,6 @@
+{
+  "bot_token": "your-telegram-bot-token-from-botfather",
+  "workspace_path": "/path/to/your/workspace",
+  "allowed_channels": [],
+  "claude_model": "claude-opus-4-6"
+}

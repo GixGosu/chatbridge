@@ -13,7 +13,7 @@ Supports **Mattermost**, **Discord**, **Slack**, and **Telegram**.
 ## Setup
 
 ```bash
-git clone <repo-url> claude-bridge && cd claude-bridge
+git clone https://github.com/GixGosu/chatbridge.git && cd chatbridge
 python3 -m venv .venv && source .venv/bin/activate
 
 # Install deps for your platform only:

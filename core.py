@@ -86,9 +86,9 @@ def run_claude(message: str, session_id: Optional[str], channel_name: str, model
     cmd.append(message)
 
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=3600)
     except subprocess.TimeoutExpired:
-        return "Request timed out (5 min limit).", session_id or ""
+        return "Request timed out (60 min limit).", session_id or ""
     except Exception as e:
         log.error(f"Claude CLI error: {e}")
         return f"Error running Claude: {e}", session_id or ""
@@ -101,6 +101,11 @@ def run_claude(message: str, session_id: Optional[str], channel_name: str, model
         data = json.loads(result.stdout)
         text = data.get("result", data.get("content", result.stdout))
         sid = data.get("session_id", session_id or "")
+
+        # Debug logging
+        log.info(f"Claude response length: {len(text)} chars")
+        log.info(f"Response preview: {text[:200]}...")
+
         return text, sid
     except json.JSONDecodeError:
         return result.stdout.strip(), session_id or ""

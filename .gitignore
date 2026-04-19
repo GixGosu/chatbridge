@@ -2,3 +2,5 @@
 __pycache__/
 sessions.json
 config.json
+check_posts.py
+get_channels.py

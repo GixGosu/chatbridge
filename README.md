@@ -4,6 +4,31 @@ Minimal chat platform bridges for [Claude Code](https://docs.anthropic.com/en/do
 
 Supports **Mattermost**, **Discord**, **Slack**, and **Telegram**.
 
+## Quick Start with an AI Coding Assistant (recommended)
+
+The fastest path. Clone the repo, open your AI coding CLI, and talk to it:
+
+```bash
+# Claude Code
+claude
+
+# Codex
+codex
+
+# Any CLI that reads project files works — the CLAUDE.md and README
+# give the assistant everything it needs to understand the project.
+```
+
+Then just ask it things in natural language:
+
+- **"Set up the Mattermost bridge with my bot token"** — it will create your `config.json`, install deps, and walk you through bot setup
+- **"Explain how the system prompt is built"** — it will read `core.py` and the workspace directory structure and break it down
+- **"Add a channel context for #project-x"** — it will create the markdown file in your workspace and explain how it gets loaded
+- **"Run the Discord bridge and help me debug connection issues"** — it will launch the bridge, read the logs, and troubleshoot with you
+- **"Add a new platform adapter"** — it will study the existing adapters, scaffold a new one following the same pattern, and wire it into the shared core
+
+The architecture is simple enough that an AI assistant can fully understand the project from the `CLAUDE.md` and this README.
+
 ## Prerequisites
 
 - Python 3.11+
